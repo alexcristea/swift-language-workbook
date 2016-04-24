@@ -1,6 +1,6 @@
 //: [Previous](@previous)
 //:
-//: # Basic Operations
+//: ## Basic Operations
 //:
 //: An operator is a symbol or phrase that you use to check, change or combine values.
 //:

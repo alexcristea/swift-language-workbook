@@ -1,6 +1,6 @@
 //: [Previous](@previous)
 //:
-//: # Collections
+//: ## Collections
 //:
 //: Swift provides three primary collection types:
 //: - Arrays

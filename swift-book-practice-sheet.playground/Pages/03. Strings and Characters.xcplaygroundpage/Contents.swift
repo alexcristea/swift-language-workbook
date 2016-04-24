@@ -1,6 +1,6 @@
 //: [Previous](@previous)
 //:
-//: # Strings and Characters
+//: ## Strings and Characters
 //:
 //: A string is a series of characters, such as "Hello world!" or "Albatross". The contents of a string can be accessed in multiple ways, including as a Collection of Characters.
 //:
