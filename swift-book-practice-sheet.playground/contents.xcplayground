@@ -21,5 +21,10 @@
         <page name='18. Error Handling'/>
         <page name='19. Type Casting'/>
         <page name='20. Nested Types'/>
+        <page name='21. Extensions'/>
+        <page name='22. Protocols'/>
+        <page name='23. Generics'/>
+        <page name='24. Access Control'/>
+        <page name='25. Advanced Operators'/>
     </pages>
 </playground>
