@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='00. Hello World'/>
+        <page name='01. Variables and Constants'/>
+        <page name='02. Standard Data Types'/>
+        <page name='04. Operators'/>
+        <page name='05. Strings and Characters'/>
+        <page name='03. Optionals'/>
+        <page name='06. Collections'/>
+        <page name='07. Control flow '/>
+    </pages>
+</playground>
