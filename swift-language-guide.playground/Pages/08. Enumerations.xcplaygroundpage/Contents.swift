@@ -55,7 +55,7 @@ default: print("Gravity gone crazy")
 
 enum Response {
     case Success(String)
-    case Error(ErrorType)
+    case Error(Error)
 }
 
 let response = Response.Success("JSON")
@@ -161,9 +161,9 @@ func evaluate(expression: AritmeticOperation) -> Int {
     case .Numeber(let value):
         return value
     case .Addition(let left, let right):
-        return evaluate(left) + evaluate(right)
+        return evaluate(expression: left) + evaluate(expression: right)
     case .Multiplication(let left, let right):
-        return evaluate(left) * evaluate(right)
+        return evaluate(expression: left) * evaluate(expression: right)
     }
 }
 
@@ -174,6 +174,6 @@ let two = AritmeticOperation.Numeber(2)
 let addition = AritmeticOperation.Addition(five, four)
 let product = AritmeticOperation.Multiplication(addition, two)
 
-evaluate(product)
+evaluate(expression: product)
 
 //: [Next](@next)

@@ -20,7 +20,7 @@ struct Validator<T>: ValidatorType {
     
     var validate: (InputType) -> Bool
     
-    init(validate: (InputType) -> Bool){
+    init(validate: @escaping (InputType) -> Bool){
         self.validate = validate
     }
     
@@ -31,7 +31,7 @@ struct Validator<T>: ValidatorType {
 
 struct ValidatorFactory {
  
-    static func validator<T>(validate:(T) -> Bool) -> Validator<T> {
+    static func validator<T>(validate:@escaping (T) -> Bool) -> Validator<T> {
         return Validator<T>(validate: validate)
     }
     
@@ -47,7 +47,7 @@ struct ValidatorFactory {
 
 var x = [Validator<String>]()
 let a = ValidatorFactory.requiredValidator()
-let b = ValidatorFactory.minimumSizeValidator(10)
+let b = ValidatorFactory.minimumSizeValidator(minimumLenght: 10)
 let c = ValidatorFactory.validator { $0 == "" }
     
 let emptyString = ""

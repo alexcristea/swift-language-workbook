@@ -62,10 +62,10 @@ x = b.thunk()
 let y:[Validator<String>] = [a.thunk(), b.thunk()]
 
 let emptyString = ""
-a.validate(emptyString)
+a.validate(value: emptyString)
 
 let password = "Parola123!"
-b.validate(password)
+b.validate(value: password)
 
 
 //: [Next](@next)

@@ -27,8 +27,8 @@ myArray = [Int]()
 myArray = Array<Int>()
 //: ----
 //: ### Creating an array with a default value
-myArray = [Int](count: 1, repeatedValue: 1)
-myArray = Array<Int>(count: 10, repeatedValue: 7)
+myArray = [Int](repeating: 1, count: 1)
+myArray = Array<Int>(repeating: 7, count: 10)
 myArray = Array<Int>(1...10)
 //: ----
 //: ### Creating an array by adding two arrays together
@@ -59,7 +59,7 @@ for value in myArray {
     print(value)
 }
 
-for (value, index) in myArray.enumerate() {
+for (value, index) in myArray.enumerated() {
     print("\(value) — \(index)")
 }
 
@@ -67,7 +67,7 @@ myArray.forEach { (element) in
     print(element)
 }
 
-myArray.enumerate().reverse().forEach { (index, element) in
+myArray.enumerated().reversed().forEach { (index, element) in
     print("\(index) — \(element)")
 }
 
@@ -108,7 +108,7 @@ charSet.count
 //: You can iterate over values in a set with the for-in loop.
 //:
 //: To iterate over the items in a specific order use the sort method.
-for char in charSet.sort() {
+for char in charSet.sorted() {
     print(char)
 }
 //: ----
@@ -119,7 +119,7 @@ for char in charSet.sort() {
 //: - union
 //: - subtract
 let a:Set<Int> = [1, 2, 3]
-let b:Set<Int> = [1, 2, 3, 4, 5, 6]
+var b:Set<Int> = [1, 2, 3, 4, 5, 6]
 
 let c = a.union(b)
 let d = b.subtract(a)
@@ -132,10 +132,10 @@ let d = b.subtract(a)
 //: - isStrictSubsetOf()
 //: - isDisjointWith()
 a == b
-a.isSubsetOf(b)
-b.isSupersetOf(a)
-b.isStrictSubsetOf(a)
-a.isStrictSupersetOf(b)
+a.isSubset(of: b)
+b.isSuperset(of: a)
+b.isStrictSubset(of: a)
+a.isStrictSuperset(of: b)
 //: ## Dictionaries
 //:
 //: A dictionary stores associations between keys of the same type and values of the same type in a collection with no defined ordering.
@@ -180,16 +180,12 @@ else {
 //: You can also retrieve and iterate over the dictionary keys or values by accessing its key and values properties.
 
 myNewDictionary.count
-myNewDictionary.keys.sort()
-myNewDictionary.values.sort()
+myNewDictionary.keys.sorted()
+myNewDictionary.values.sorted()
 
 
 for (key, value) in myNewDictionary {
     print(key, value)
 }
-
-
-// Feedback
--
 //:
 //: [Next](@next)

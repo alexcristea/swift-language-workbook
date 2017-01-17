@@ -31,7 +31,7 @@ class Counter {
 
 var counter = Counter()
 counter.increment()
-counter.incrementBy(6)
+counter.incrementBy(amount: 6)
 
 print(counter.count)
 //: ----
@@ -46,7 +46,7 @@ extension Counter {
 }
 
 var a = Counter()
-a.incrementBy(2, multipliedBy: 8)
+a.incrementBy(amount: 2, multipliedBy: 8)
 
 print(a.count)
 //: ----

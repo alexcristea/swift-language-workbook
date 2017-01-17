@@ -72,6 +72,6 @@ code
 myTuple.0
 myTuple.message
 
-myTuple.dynamicType
+type(of: myTuple)
 
 //: [Next](@next)
